@@ -1,0 +1,140 @@
+Last login: Fri Jul 14 19:42:17 on console
+MacBook-Air-de-Andrea:~ andreaterroba$ git clone https://github.com/andreaterroba/repoandreaexamen.git
+Cloning into 'repoandreaexamen'...
+warning: You appear to have cloned an empty repository.
+MacBook-Air-de-Andrea:~ andreaterroba$ touch archivouno.md
+MacBook-Air-de-Andrea:~ andreaterroba$ touch archivodos.md
+MacBook-Air-de-Andrea:~ andreaterroba$ touch archivotres.md
+MacBook-Air-de-Andrea:~ andreaterroba$ echo "# Este es el primer archivo" > archivouno.md
+MacBook-Air-de-Andrea:~ andreaterroba$ git add archivouno.md
+MacBook-Air-de-Andrea:~ andreaterroba$ git commit -m "Este es el primer envío del archivo uno"
+[master ee951cd] Este es el primer envío del archivo uno
+ 2 files changed, 4 insertions(+)
+ delete mode 100644 archivoprueba.md
+ create mode 100644 archivouno.md
+MacBook-Air-de-Andrea:~ andreaterroba$ git push -u orign master
+fatal: 'orign' does not appear to be a git repository
+fatal: Could not read from remote repository.
+
+Please make sure you have the correct access rights
+and the repository exists.
+MacBook-Air-de-Andrea:~ andreaterroba$ git remote rm origin
+MacBook-Air-de-Andrea:~ andreaterroba$ git remote origin https://github.com/andreaterroba/repoandreaexamen.git
+error: Unknown subcommand: origin
+usage: git remote [-v | --verbose]
+   or: git remote add [-t <branch>] [-m <master>] [-f] [--tags | --no-tags] [--mirror=<fetch|push>] <name> <url>
+   or: git remote rename <old> <new>
+   or: git remote remove <name>
+   or: git remote set-head <name> (-a | --auto | -d | --delete | <branch>)
+   or: git remote [-v | --verbose] show [-n] <name>
+   or: git remote prune [-n | --dry-run] <name>
+   or: git remote [-v | --verbose] update [-p | --prune] [(<group> | <remote>)...]
+   or: git remote set-branches [--add] <name> <branch>...
+   or: git remote get-url [--push] [--all] <name>
+   or: git remote set-url [--push] <name> <newurl> [<oldurl>]
+   or: git remote set-url --add <name> <newurl>
+   or: git remote set-url --delete <name> <url>
+
+    -v, --verbose         be verbose; must be placed before a subcommand
+
+MacBook-Air-de-Andrea:~ andreaterroba$ git push -u origin master
+fatal: 'origin' does not appear to be a git repository
+fatal: Could not read from remote repository.
+
+Please make sure you have the correct access rights
+and the repository exists.
+MacBook-Air-de-Andrea:~ andreaterroba$ git remote add https://github.com/andreaterroba/repoandreaexamen.git
+usage: git remote add [<options>] <name> <url>
+
+    -f, --fetch           fetch the remote branches
+    --tags                import all tags and associated objects when fetching
+                          or do not fetch any tag at all (--no-tags)
+    -t, --track <branch>  branch(es) to track
+    -m, --master <branch>
+                          master branch
+    --mirror[=<push|fetch>]
+                          set up remote as a mirror to push to or fetch from
+
+MacBook-Air-de-Andrea:~ andreaterroba$ git push -u origin master
+fatal: 'origin' does not appear to be a git repository
+fatal: Could not read from remote repository.
+
+Please make sure you have the correct access rights
+and the repository exists.
+MacBook-Air-de-Andrea:~ andreaterroba$ git remote -v
+MacBook-Air-de-Andrea:~ andreaterroba$ git remote rm origin
+fatal: No such remote: origin
+MacBook-Air-de-Andrea:~ andreaterroba$ git remote add origin https://github.com/andreaterroba/repoandreaexamen.git
+MacBook-Air-de-Andrea:~ andreaterroba$ git add archivodos.md
+MacBook-Air-de-Andrea:~ andreaterroba$ git commit -m "Envío uno del archivo dos"[master 23a22b5] Envío uno del archivo dos
+ 1 file changed, 3 insertions(+)
+ create mode 100644 archivodos.md
+MacBook-Air-de-Andrea:~ andreaterroba$ git push -u origin master
+Counting objects: 24, done.
+Delta compression using up to 4 threads.
+Compressing objects: 100% (17/17), done.
+Writing objects: 100% (24/24), 2.29 KiB | 0 bytes/s, done.
+Total 24 (delta 3), reused 0 (delta 0)
+remote: Resolving deltas: 100% (3/3), done.
+To https://github.com/andreaterroba/repoandreaexamen.git
+ * [new branch]      master -> master
+Branch master set up to track remote branch master from origin.
+MacBook-Air-de-Andrea:~ andreaterroba$ git add archivotres.md
+MacBook-Air-de-Andrea:~ andreaterroba$ git commit -m "Envío uno del archivo tres"
+[master 18506fe] Envío uno del archivo tres
+ 1 file changed, 3 insertions(+)
+ create mode 100644 archivotres.md
+MacBook-Air-de-Andrea:~ andreaterroba$ git push -u origin master
+Counting objects: 3, done.
+Delta compression using up to 4 threads.
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 438 bytes | 0 bytes/s, done.
+Total 3 (delta 0), reused 0 (delta 0)
+To https://github.com/andreaterroba/repoandreaexamen.git
+   23a22b5..18506fe  master -> master
+Branch master set up to track remote branch master from origin.
+MacBook-Air-de-Andrea:~ andreaterroba$ git brunch
+git: 'brunch' is not a git command. See 'git --help'.
+
+Did you mean this?
+	branch
+MacBook-Air-de-Andrea:~ andreaterroba$ git branch
+* master
+MacBook-Air-de-Andrea:~ andreaterroba$ git checkout -b otrarama
+Switched to a new branch 'otrarama'
+MacBook-Air-de-Andrea:~ andreaterroba$ git branch
+  master
+* otrarama
+MacBook-Air-de-Andrea:~ andreaterroba$ touch archivocuatro.md
+MacBook-Air-de-Andrea:~ andreaterroba$ git add archivocuatro.md
+MacBook-Air-de-Andrea:~ andreaterroba$ git commit -m "envío del archivo cuatro desde 'otrarama'"
+[otrarama fcc0148] envío del archivo cuatro desde 'otrarama'
+ 1 file changed, 3 insertions(+)
+ create mode 100644 archivocuatro.md
+MacBook-Air-de-Andrea:~ andreaterroba$ git push -u otrarama 
+fatal: 'otrarama' does not appear to be a git repository
+fatal: Could not read from remote repository.
+
+Please make sure you have the correct access rights
+and the repository exists.
+MacBook-Air-de-Andrea:~ andreaterroba$ git push -u origin otrarama
+Counting objects: 3, done.
+Delta compression using up to 4 threads.
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 434 bytes | 0 bytes/s, done.
+Total 3 (delta 1), reused 0 (delta 0)
+remote: Resolving deltas: 100% (1/1), completed with 1 local object.
+To https://github.com/andreaterroba/repoandreaexamen.git
+ * [new branch]      otrarama -> otrarama
+Branch otrarama set up to track remote branch otrarama from origin.
+MacBook-Air-de-Andrea:~ andreaterroba$ git checkout master
+Switched to branch 'master'
+Your branch is up-to-date with 'origin/master'.
+MacBook-Air-de-Andrea:~ andreaterroba$ git merge otrarama
+Updating 18506fe..fcc0148
+Fast-forward
+ archivocuatro.md | 3 +++
+ 1 file changed, 3 insertions(+)
+ create mode 100644 archivocuatro.md
+MacBook-Air-de-Andrea:~ andreaterroba$ touch acciones.log
+MacBook-Air-de-Andrea:~ andreaterroba$ 
